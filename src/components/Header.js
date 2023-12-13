@@ -133,8 +133,20 @@ export default function Header() {
 
                     <div className="flex">
                       <div className="relative flex">
-                        <Link to="/catalogo" className="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" aria-expanded="false">
+                        <Link to="./about" className="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" aria-expanded="false">
                           Sobre Nosotros
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden lg:ml-8 lg:block lg:self-stretch">
+                  <div className="h-full flex space-x-8">
+
+                    <div className="flex">
+                      <div className="relative flex">
+                        <Link to="/reserv" className="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" aria-expanded="false">
+                          Reserva
                         </Link>
                       </div>
                     </div>

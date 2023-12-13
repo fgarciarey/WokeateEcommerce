@@ -24,6 +24,8 @@ import LayoutState from './context/Layout/LayoutState'
 import AuthRoute from './components/Routes/AuthRoute';
 import PrivateRoute from './components/Routes/PrivateRoute'
 import PublicRoute from './components/Routes/PublicRoute';
+import {Reservas}  from './components/Reservas';
+import About from "./components/About";
 
 
 
@@ -47,6 +49,12 @@ function App() {
 
               {/* RUTAS ESTÁTICAS */}
               <PublicRoute exact path="/catalogo" component={Catalog} />
+
+              {/* RUTAS ESTATICAS */}
+              <PublicRoute exact path="/reserv" component={Reservas} />
+              <PublicRoute exact path="/about" component={About} />
+
+              
 
               {/* RUTAS DINÁMICAS */}
               <PublicRoute exact path="/:productId" component={Product} />

@@ -27,9 +27,9 @@ export default function Main() {
 
                   <div className="mt-10 max-w-sm mx-auto sm:max-w-none flex justify-center">
                     <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5">
-                      <Link to="/catalogo">
+                      <Link to="/about">
                         <a className="flex items-center justify-center px-4 py-3 border border-transparent text-base text-white font-medium rounded-md shadow-sm bg-blue-500 hover:bg-blue-300 sm:px-8">
-                          Ver catálogo
+                          Conoce más de nosotros
                         </a>
                       </Link>
                     </div>

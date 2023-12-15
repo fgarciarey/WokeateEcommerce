@@ -46,7 +46,7 @@ export default function Header() {
 
                   <div className="flow-root" onClick={toggleMobileSidebar}>
                     <Link to="/catalogo">
-                      <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</a>
+                      <a href="" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</a>
                     </Link>
                   </div>
                 </div>
@@ -55,38 +55,25 @@ export default function Header() {
 
                   {
                     ctxUser.user?.name ?
-                      <>
-                        <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/perfil">
-                            <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Mi perfil</a>
-                          </Link>
-                        </div>
-                      </>
-                      :
-                      <>
-                        <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/iniciar-sesion">
-                            <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Iniciar sesión</a>
-                          </Link>
-                        </div>
-                        <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/iniciar-sesion">
-                            <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Crear cuenta</a>
-                          </Link>
-                        </div>
-                      </>
+                    <>
+                    <div className="flow-root" onClick={toggleMobileSidebar}>
+                      <Link to="/perfil" className="-m-2 p-2 block font-medium text-gray-900">Mi perfil</Link>
+                    </div>
+                  </>
+                  :
+                  <>
+                    <div className="flow-root" onClick={toggleMobileSidebar}>
+                      <Link to="/iniciar-sesion" className="-m-2 p-2 block font-medium text-gray-900">Iniciar sesión</Link>
+                    </div>
+                    <div className="flow-root" onClick={toggleMobileSidebar}>
+                      <Link to="/iniciar-sesion" className="-m-2 p-2 block font-medium text-gray-900">Crear cuenta</Link>
+                    </div>
+                  </>
                   }
 
                 </div>
 
-                <div className="border-t border-gray-200 py-6 px-4">
-                  <div className="-m-2 p-2 flex items-center">
-                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
-                    <span className="ml-3 block text-base font-medium text-gray-900">
-                      USD
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
             :

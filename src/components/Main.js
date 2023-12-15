@@ -1,12 +1,12 @@
 
 import { Link } from 'react-router-dom'
 import BackgroundJumbotron from './../assets/wallpaper.jpg'
-import ListGuitars from './ListGuitars'
+import ListWoks from './ListWoks'
 
 export default function Main() {
   return (
     <>
-      <main classNameName="mt-10">
+      <main className="mt-10">
         <div>
           <div className="relative">
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
@@ -42,7 +42,7 @@ export default function Main() {
 
       </main>
 
-      <ListGuitars title="Conoce nuestro catálogo" />
+      <ListWoks title="Conoce nuestro Menú" />
     </>
   )
 }

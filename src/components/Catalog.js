@@ -1,10 +1,10 @@
 import React from 'react'
-import ListGuitars from './ListGuitars'
+import ListWoks from './ListWoks'
 
 export default function Catalog() {
     return (
         <div>
-            <ListGuitars title="Menú" />
+            <ListWoks title="Menú" />
         </div>
     )
 }

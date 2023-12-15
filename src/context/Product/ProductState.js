@@ -1,78 +1,65 @@
-import { useReducer } from 'react'
+import { useReducer } from 'react';
 
-import axiosClient from "./../../config/axios"
+import axiosClient from './../../config/axios';
 
-import ProductContext from "./ProductContext"
-import ProductReducer from "./ProductReducer"
+import ProductContext from './ProductContext';
+import ProductReducer from './ProductReducer';
 
 const ProductState = (props) => {
+  const initialState = {
+    woks: [],
+    wok: [
+      {
+        id_: '',
+        nombre: '',
+        descripcion: '',
+        precio: '',
+        imagen: '',
+      },
+    ],
+  };
 
-    const initialState = {
-        guitars: [],
-        guitar: [{
-            id_: "",
-            nombre: "",
-            color: "",
-            precio: "",
-            imagen: ""
-        }]
-    }
+  const [globalState, dispatch] = useReducer(ProductReducer, initialState);
 
-    const [globalState, dispatch] = useReducer(ProductReducer, initialState)
+  const getWok = async (id) => {
+    const res = await axiosClient.get(`/obtener-pwok/${id}`)
+    const wok = res.data.wok
 
-    const getGuitar = async (id) => {
+    dispatch({
+      type: 'GET_WOK',
+      payload: wok
+    })
 
-        const res = await axiosClient.get(`/obtener-guitarra/${id}`)
+    return wok
+  }
 
-        const guitar = res.data.guitar
+  const getWoks = async () => {
+    const res = await axiosClient.get('/obtener-pwoks')
+    dispatch({
+      type: 'GET_WOKS',
+      payload: res.data.woks
+    })
+  }
 
-        dispatch({
-            type: "GET_GUITAR",
-            payload: guitar
-        })
+  const getPreferenceCheckoutMP = async (dataform) => {
+    console.log("dataform:", dataform)
+    const res = await axiosClient.post('/mercadopago', dataform)
+    return res.data.checkoutId
+  }
 
-        return guitar
+  return (
+    <ProductContext.Provider
+      value={{
+        woks: globalState.woks,
+        wok: globalState.wok,
+        getWok,
+        getWoks,
+        getPreferenceCheckoutMP,
+      }}
+    >
+      {props.children}
+    </ProductContext.Provider>
+  );
+};
 
-    }
-
-
-    const getGuitars = async () => {
-
-        const res = await axiosClient.get("/obtener-guitarras")
-
-        dispatch({
-            type: "GET_GUITARS",
-            payload: res.data.guitarras
-        })
-
-    }
-
-    const getPreferenceCheckoutMP = async (dataform) => {
-
-        console.log("dataform:", dataform)
-
-        const res = await axiosClient.post("/mercadopago", dataform)
-
-        return res.data.checkoutId
-
-    }
-
-
-    return (
-        <ProductContext.Provider
-            value={{
-                guitars: globalState.guitars,
-                guitar: globalState.guitar,
-                getGuitar,
-                getGuitars,
-                getPreferenceCheckoutMP       
-            }}
-        >
-            { props.children }
-        </ProductContext.Provider>
-    )
-
-}
-
-
-export default ProductState
+export default ProductState;

@@ -23,7 +23,7 @@ $ npm install
 $ npm run start.
 ```
 
-####Terminal 2
+### Terminal 2 (Server)
 
 ```bash
 $ cd server

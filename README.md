@@ -33,3 +33,11 @@ $ npm run dev
 
 ### Proyecto Ecommerce Server
 https://github.com/fgarciarey/WokeateEcommerceServer
+
+### Usuarios:
+
+- usuario: ff@gmail.com
+- password: 12345
+
+- usuario: fe@gmail.com
+- password: 12345

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/client/static/css/main.9033f84f.chunk.css",
+    "main.js": "/client/static/js/main.cc021bcc.chunk.js",
+    "main.js.map": "/client/static/js/main.cc021bcc.chunk.js.map",
+    "runtime-main.js": "/client/static/js/runtime-main.8ded3e85.js",
+    "runtime-main.js.map": "/client/static/js/runtime-main.8ded3e85.js.map",
+    "static/js/2.cbdfa3b3.chunk.js": "/client/static/js/2.cbdfa3b3.chunk.js",
+    "static/js/2.cbdfa3b3.chunk.js.map": "/client/static/js/2.cbdfa3b3.chunk.js.map",
+    "static/js/3.83bd63db.chunk.js": "/client/static/js/3.83bd63db.chunk.js",
+    "static/js/3.83bd63db.chunk.js.map": "/client/static/js/3.83bd63db.chunk.js.map",
+    "index.html": "/client/index.html",
+    "static/css/main.9033f84f.chunk.css.map": "/client/static/css/main.9033f84f.chunk.css.map",
+    "static/js/2.cbdfa3b3.chunk.js.LICENSE.txt": "/client/static/js/2.cbdfa3b3.chunk.js.LICENSE.txt",
+    "static/media/fondonosotros.8afc9022.jpg": "/client/static/media/fondonosotros.8afc9022.jpg",
+    "static/media/logowok.9f9e894a.png": "/client/static/media/logowok.9f9e894a.png",
+    "static/media/wallpaper.2bbed466.jpg": "/client/static/media/wallpaper.2bbed466.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ded3e85.js",
+    "static/js/2.cbdfa3b3.chunk.js",
+    "static/css/main.9033f84f.chunk.css",
+    "static/js/main.cc021bcc.chunk.js"
+  ]
+}

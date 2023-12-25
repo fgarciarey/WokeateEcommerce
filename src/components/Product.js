@@ -47,7 +47,7 @@ export default function Product() {
     }
 
     fetchWok();
-  }, [productId, user, getWok, getPreferenceCheckoutMP]);
+  }, [/*productId, user, getWok, getPreferenceCheckoutMP*/]);
 
   // Mover la función addCheckout fuera del bloque useEffect
   const addCheckout = (id) => {

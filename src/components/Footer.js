@@ -6,10 +6,7 @@ export default function Footer() {
       <footer className="bg-white">
         <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
           <div className="mt-8 flex justify-center space-x-6">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-gray-500"
-            >
+            <a href="#" className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">Facebook</span>
 
               <svg
@@ -26,10 +23,7 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a
-              href="#"
-              className="text-gray-400 hover:text-gray-500"
-            >
+            <a href="#" className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">Instagram</span>
 
               <svg
@@ -46,10 +40,7 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a
-              href="#"
-              className="text-gray-400 hover:text-gray-500"
-            >
+            <a href="#" className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">Twitter</span>
 
               <svg

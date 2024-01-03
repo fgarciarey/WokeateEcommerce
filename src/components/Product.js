@@ -14,46 +14,56 @@ export default function Product() {
   const ctxUser = useContext(UserContext);
   const { user } = ctxUser;
 
-  useEffect(() => {
-    const fetchWok = async () => {
-      const res = await getWok(productId);
+  useEffect(
+    () => {
+      const fetchWok = async () => {
+        const res = await getWok(productId);
 
-      // MANEJO DE MERCADOPAGO.COM, SOLO SI HAY USUARIO
-      if (user) {
-        const id = await getPreferenceCheckoutMP({
-          items: [
-            {
-              title: res.nombre,
-              quantity: 1,
-              currency_id: "CLP",
-              unit_price: res.precio,
-              picture_url: res.imagen
-            }
-          ],
-          payer: {
-            name: user.name,
-            email: user.email
-          }
-        })
+        // MANEJO DE MERCADOPAGO.COM, SOLO SI HAY USUARIO
+        if (user) {
+          const id = await getPreferenceCheckoutMP({
+            items: [
+              {
+                title: res.nombre,
+                quantity: 1,
+                currency_id: "CLP",
+                unit_price: res.precio,
+                picture_url: res.imagen,
+              },
+            ],
+            payer: {
+              name: user.name,
+              email: user.email,
+            },
+          });
 
-        const script = document.createElement('script');
+          const script = document.createElement("script");
 
-        script.type = 'text/javascript';
-        script.src = 'https://sdk.mercadopago.com/js/v2';
+          script.type = "text/javascript";
+          script.src = "https://sdk.mercadopago.com/js/v2";
 
-        script.addEventListener('load', () => { addCheckout(id) });
-        return document.body.appendChild(script);
-      }
-    }
+          script.addEventListener("load", () => {
+            addCheckout(id);
+          });
+          return document.body.appendChild(script);
+        }
+      };
 
-    fetchWok();
-  }, [/*productId, user, getWok, getPreferenceCheckoutMP*/]);
+      fetchWok();
+    },
+    [
+      /*productId, user, getWok, getPreferenceCheckoutMP*/
+    ]
+  );
 
   // Mover la función addCheckout fuera del bloque useEffect
   const addCheckout = (id) => {
-    const mp = new window.MercadoPago(process.env.REACT_APP_MERCADO_PAGO_PUBLIC_KEY, {
-      locale: "es-CL",
-    });
+    const mp = new window.MercadoPago(
+      process.env.REACT_APP_MERCADO_PAGO_PUBLIC_KEY,
+      {
+        locale: "es-CL",
+      }
+    );
 
     mp.checkout({
       preference: {
@@ -110,7 +120,14 @@ export default function Product() {
               </ol>
             </nav>
             <div className="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
-              <div className="w-full rounded-lg overflow-hidden lg:block" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div
+                className="w-full rounded-lg overflow-hidden lg:block"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <img
                   src={imagen}
                   alt="Two each of gray, white, and black shirts laying flat."
@@ -151,7 +168,6 @@ export default function Product() {
                     </button>
                   </Link>
                 )}
-                
               </div>
 
               <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -159,15 +175,9 @@ export default function Product() {
                   <h3 className="sr-only">Description</h3>
 
                   <div className="space-y-6">
-                    <p className="text-base text-gray-900">
-                      {desclarga}
-                    </p>
+                    <p className="text-base text-gray-900">{desclarga}</p>
                   </div>
                 </div>
-
-                
-
-                
               </div>
             </div>
           </div>

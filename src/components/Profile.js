@@ -1,31 +1,32 @@
-import React, { useState, useEffect, useContext } from 'react';
-import UserContext from '../context/User/UserContext';
+import React, { useState, useEffect, useContext } from "react";
+import UserContext from "../context/User/UserContext";
 
 export default function Profile() {
   const ctx = useContext(UserContext);
 
   const { userSubmitForm } = ctx;
 
-  const { name, email, lastname, country, address, city, state, zipcode } = ctx.user;
+  const { name, email, lastname, country, address, city, state, zipcode } =
+    ctx.user;
 
   const [userForm, setUserForm] = useState({
-    name: '',
-    lastname: '',
-    country: '',
-    address: '',
-    city: '',
-    state: '',
-    zipcode: '',
+    name: "",
+    lastname: "",
+    country: "",
+    address: "",
+    city: "",
+    state: "",
+    zipcode: "",
     email,
   });
 
   let countries = [
-    '-----',
-    'México',
-    'Colombia',
-    'Perú',
-    'Chile',
-    'Otro país...',
+    "-----",
+    "México",
+    "Colombia",
+    "Perú",
+    "Chile",
+    "Otro país...",
   ];
 
   const handleChange = async (event) => {
@@ -71,12 +72,16 @@ export default function Profile() {
                       Tu información personal
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">
-                      (Recuerda que es una app con objetivos de aprendizaje. Introduce datos no reales 😉)
+                      (Recuerda que es una app con objetivos de aprendizaje.
+                      Introduce datos no reales 😉)
                     </p>
                   </div>
                   <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                     <div className="sm:col-span-3">
-                      <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="first-name"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Tu nombre
                       </label>
                       <div className="mt-1">
@@ -95,7 +100,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-3">
-                      <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="last-name"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Tus apellidos
                       </label>
                       <div className="mt-1">
@@ -114,7 +122,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-6">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Tu correo
                       </label>
                       <div className="mt-1">
@@ -130,7 +141,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-6">
-                      <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="country"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Tu país
                       </label>
 
@@ -162,7 +176,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-6">
-                      <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="street-address"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Dirección física (Incluye observaciones de ubicación)
                       </label>
                       <div className="mt-1">
@@ -179,7 +196,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-1">
-                      <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="city"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Ciudad
                       </label>
                       <div className="mt-1">
@@ -196,7 +216,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-1">
-                      <label htmlFor="state" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="state"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Estado / Provincia
                       </label>
                       <div className="mt-1">
@@ -213,7 +236,10 @@ export default function Profile() {
                     </div>
 
                     <div className="sm:col-span-1">
-                      <label htmlFor="zipcode" className="block text-sm font-medium text-gray-700">
+                      <label
+                        htmlFor="zipcode"
+                        className="block text-sm font-medium text-gray-700"
+                      >
                         Código Postal
                       </label>
                       <div className="mt-1">

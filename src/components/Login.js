@@ -1,40 +1,32 @@
-import React, { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
-import UserContext from './../context/User/UserContext'
+import UserContext from "./../context/User/UserContext";
 
-
-import logowok from "./../assets/logowok.png"
+import logowok from "./../assets/logowok.png";
 
 export default function Login() {
+  const userCtx = useContext(UserContext);
 
-  const userCtx = useContext(UserContext)
-
-  const { 
-      loginUser      
-  } = userCtx
+  const { loginUser } = userCtx;
 
   const [data, setData] = useState({
-      email: "",
-      password: ""
-  })
+    email: "",
+    password: "",
+  });
 
   const handleChange = (event) => {
-
     setData({
-        ...data,
-        [event.target.name]: event.target.value
-    })
-
-}
+      ...data,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const sendData = (event) => {
-      
-      event.preventDefault()
+    event.preventDefault();
 
-      return loginUser(data)
-
-  }
+    return loginUser(data);
+  };
 
   return (
     <div className="bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -55,43 +47,59 @@ export default function Login() {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form 
+          <form
             className="space-y-6"
-            onSubmit={(e) => { sendData(e) }}
+            onSubmit={(e) => {
+              sendData(e);
+            }}
           >
             <div>
-              <label for="email" className="block text-sm font-medium text-gray-700">
+              <label
+                for="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Tu correo electrónico
               </label>
               <div className="mt-1">
-                <input 
-                  id="email" 
-                  name="email" 
-                  type="email" 
-                  onChange={(e) => { handleChange(e) }}
-                  required 
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  onChange={(e) => {
+                    handleChange(e);
+                  }}
+                  required
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
               </div>
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label
+                for="password"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Tu contraseña
               </label>
               <div className="mt-1">
-                <input 
-                  id="password" 
-                  name="password" 
+                <input
+                  id="password"
+                  name="password"
                   type="password"
-                  required 
-                  onChange={(e) => { handleChange(e) }}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                  required
+                  onChange={(e) => {
+                    handleChange(e);
+                  }}
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                />
               </div>
             </div>
 
-
             <div>
-              <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <button
+                type="submit"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
                 Acceder a tu cuenta
               </button>
             </div>
@@ -99,6 +107,5 @@ export default function Login() {
         </div>
       </div>
     </div>
-
-  )
+  );
 }

@@ -87,7 +87,10 @@ export const Reservas = () => {
 
             {/* Agrega campos adicionales para la reserva */}
             <div>
-              <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="nombre"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Tu nombre
               </label>
               <div className="mt-1">
@@ -104,7 +107,10 @@ export const Reservas = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Correo
               </label>
               <div className="mt-1">
@@ -121,7 +127,10 @@ export const Reservas = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="comensales" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="comensales"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Comensales
               </label>
               <div className="mt-1">
@@ -138,7 +147,10 @@ export const Reservas = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="comensales" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="comensales"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Comensales
               </label>
               <div className="mt-1">

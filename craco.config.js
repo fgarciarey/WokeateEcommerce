@@ -1,6 +1,6 @@
 // craco.config.js
 module.exports = {
-  base: '/WokeateEcommerceCliente/',
+  base: '/WokeateEcommerceCliente',
     style: {
       postcss: {
         plugins: [

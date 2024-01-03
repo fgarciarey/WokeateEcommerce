@@ -151,7 +151,7 @@ export const Reservas = () => {
                 htmlFor="comensales"
                 className="block text-sm font-medium text-gray-700"
               >
-                Fecha
+                Fecha de Reserva
               </label>
               <div className="mt-1">
                 <input

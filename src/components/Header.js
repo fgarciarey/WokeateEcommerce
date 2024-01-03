@@ -46,7 +46,7 @@ export default function Header() {
 
                   <div className="flow-root" onClick={toggleMobileSidebar}>
                     <Link to="/catalogo">
-                      <a href="" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</a>
+                      <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</a>
                     </Link>
                   </div>
                 </div>

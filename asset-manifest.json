@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/client/static/css/main.9033f84f.chunk.css",
-    "main.js": "/client/static/js/main.cc021bcc.chunk.js",
-    "main.js.map": "/client/static/js/main.cc021bcc.chunk.js.map",
-    "runtime-main.js": "/client/static/js/runtime-main.8ded3e85.js",
-    "runtime-main.js.map": "/client/static/js/runtime-main.8ded3e85.js.map",
-    "static/js/2.cbdfa3b3.chunk.js": "/client/static/js/2.cbdfa3b3.chunk.js",
-    "static/js/2.cbdfa3b3.chunk.js.map": "/client/static/js/2.cbdfa3b3.chunk.js.map",
-    "static/js/3.83bd63db.chunk.js": "/client/static/js/3.83bd63db.chunk.js",
-    "static/js/3.83bd63db.chunk.js.map": "/client/static/js/3.83bd63db.chunk.js.map",
-    "index.html": "/client/index.html",
-    "static/css/main.9033f84f.chunk.css.map": "/client/static/css/main.9033f84f.chunk.css.map",
-    "static/js/2.cbdfa3b3.chunk.js.LICENSE.txt": "/client/static/js/2.cbdfa3b3.chunk.js.LICENSE.txt",
-    "static/media/fondonosotros.8afc9022.jpg": "/client/static/media/fondonosotros.8afc9022.jpg",
-    "static/media/logowok.9f9e894a.png": "/client/static/media/logowok.9f9e894a.png",
-    "static/media/wallpaper.2bbed466.jpg": "/client/static/media/wallpaper.2bbed466.jpg"
+    "main.css": "/WokeateEcommerceCliente/static/css/main.9033f84f.chunk.css",
+    "main.js": "/WokeateEcommerceCliente/static/js/main.cae8f0b8.chunk.js",
+    "main.js.map": "/WokeateEcommerceCliente/static/js/main.cae8f0b8.chunk.js.map",
+    "runtime-main.js": "/WokeateEcommerceCliente/static/js/runtime-main.d4ac7922.js",
+    "runtime-main.js.map": "/WokeateEcommerceCliente/static/js/runtime-main.d4ac7922.js.map",
+    "static/js/2.3a1cb9c9.chunk.js": "/WokeateEcommerceCliente/static/js/2.3a1cb9c9.chunk.js",
+    "static/js/2.3a1cb9c9.chunk.js.map": "/WokeateEcommerceCliente/static/js/2.3a1cb9c9.chunk.js.map",
+    "static/js/3.83bd63db.chunk.js": "/WokeateEcommerceCliente/static/js/3.83bd63db.chunk.js",
+    "static/js/3.83bd63db.chunk.js.map": "/WokeateEcommerceCliente/static/js/3.83bd63db.chunk.js.map",
+    "index.html": "/WokeateEcommerceCliente/index.html",
+    "static/css/main.9033f84f.chunk.css.map": "/WokeateEcommerceCliente/static/css/main.9033f84f.chunk.css.map",
+    "static/js/2.3a1cb9c9.chunk.js.LICENSE.txt": "/WokeateEcommerceCliente/static/js/2.3a1cb9c9.chunk.js.LICENSE.txt",
+    "static/media/fondonosotros.8afc9022.jpg": "/WokeateEcommerceCliente/static/media/fondonosotros.8afc9022.jpg",
+    "static/media/logowok.9f9e894a.png": "/WokeateEcommerceCliente/static/media/logowok.9f9e894a.png",
+    "static/media/wallpaper.2bbed466.jpg": "/WokeateEcommerceCliente/static/media/wallpaper.2bbed466.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ded3e85.js",
-    "static/js/2.cbdfa3b3.chunk.js",
+    "static/js/runtime-main.d4ac7922.js",
+    "static/js/2.3a1cb9c9.chunk.js",
     "static/css/main.9033f84f.chunk.css",
-    "static/js/main.cc021bcc.chunk.js"
+    "static/js/main.cae8f0b8.chunk.js"
   ]
 }
